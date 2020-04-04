@@ -1,0 +1,37 @@
+.row {
+    /*to enable space to avoid collision between the sections */
+    @mixin clearfix;
+
+    padding-top: 1rem;
+
+    @mixin atMedium {
+        padding-top: 1.875rem;
+    }
+
+    &--gutters {
+        margin-right: -65px;
+    }
+
+    /* direct children of parent */
+    &--gutters > div {
+        padding-right: 65px;
+        /*box-sizing: border-box; added to global*/
+    }
+   
+
+    @mixin atMedium {
+
+        &--medium-4 {
+            float: left;
+            width: 33.33%;
+        }
+    
+        &--medium-8 {
+            float: left;
+            width: 66.66%;
+        }
+    }
+
+    
+   
+}
