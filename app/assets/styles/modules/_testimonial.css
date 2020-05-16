@@ -3,6 +3,10 @@
     padding: 0 1.8125rem 1px 1.8125rem;
     margin-bottom: 98px; /*for smaller screens*/
 
+    @mixin atMedium {
+        margin-bottom: 0;
+    }
+
     &__photo {
         border-radius: 80px;
         overflow: hidden;
@@ -32,5 +36,8 @@
 
     &--last {
         margin-bottom: 0;
+        @mixin atLarge{
+            margin-bottom: -0;
+        }
     }
 }
