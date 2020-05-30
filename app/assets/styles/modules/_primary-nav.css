@@ -1,0 +1,56 @@
+.primary-nav {
+    padding: 12px;
+
+    @mixin atMedium {
+        padding-top: 10px;
+    }
+
+    &--float-right {
+        @mixin atMedium {
+            float: right;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+        padding-right: 7px;
+
+        @mixin atMedium {
+            float: left;
+            display: block;
+            padding-right: 20px;
+        }
+    }
+
+    li:last-child {
+        padding-right: 0;
+        @mixin atMedium {
+            padding-right: 20px;
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+        background-color: rgba($mainBlue, 0.5);
+        padding: 3px 5px;
+        font-size: 0.9rem;
+
+        @mixin atMedium {
+            font-size: 1rem;
+            background-color: transparent;
+
+            &.is-current-link {
+                color: #fabb69;
+            }
+        }
+    }
+}
